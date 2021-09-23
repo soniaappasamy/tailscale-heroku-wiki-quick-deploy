@@ -1,0 +1,21 @@
+{
+  "name": "Wiki.js over Tailscale",
+  "description": "Deploy an open-source wiki app only accessible over your Tailscale network.",
+  "repository": "https://github.com/soniaappasamy/tailscale-heroku-wiki-quick-deploy",
+  "logo": "https://tailscale.com/static/logo.svg",
+  "keywords": ["tailscale", "wiki", "heroku"],
+  "website": "https://tailscale.com/",
+  "success_url": "/",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "env": {
+    "TAILSCALE_AUTHKEY": {
+      "description": "Key for authenticating Tailscale without needing to manually login from a web browser. When using the quick-deploy button via the Tailscale admin panel, this gets set for you. A key can be manually generated at https://login.tailscale.com/admin/settings/authkeys",
+      "required": true
+    }
+  },
+  "stack": "container"
+}
